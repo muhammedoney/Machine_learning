@@ -6,11 +6,11 @@ close all;
 clc;
 %% datapreprocessing
 M = readtable('veriler.csv');
-x_train = M(1:15,1:4);  %satýr sayýsýnýn %77si kadar egitim verisi
-y_train = M(1:15,4);    %egitimde kullanýlan veriler, tahmin edilecek sütun dýþýndaki sütunlardan 
-                        %alýnan örnekler icin(x),
-                        %tahmin edilecek sütundan alýnan örnekler icin(y) kullanýlýr
-x_test = M(16:end,1:4); %satýr sayýsýnýn %33ü kadar test verisi
+x_train = M(1:15,1:4);  %satir sayisinin %77si kadar egitim verisi
+y_train = M(1:15,4);    %egitimde kullanilan veriler, tahmin edilecek sütun disinndaki sutunlardan 
+                        %alinan örnekler icin(x),
+                        %tahmin edilecek sütundan alinan örnekler icin(y) kullanilir
+x_test = M(16:end,1:4); %satir sayisinin %33ü kadar test verisi
 y_test = M(16:end,4);   %known values
 
 %% train for  KNN Algorithm
@@ -20,7 +20,7 @@ mdl = fitcknn(x_train,y_train,'NumNeighbors',3,'NSMethod','exhaustive','Distance
 label = predict(mdl,x_test); %predicted values
 
 %% error calculation with confusion matrix
-y_test = table2array(y_test);
+y_test = table2array(y_test); %%y_test table formatinda bir veri tipi olduğu için label ile confusionmatrixe sokabilmek icin labelin veri tipine donusturuldu
 C = confusionmat(y_test,label);
 size_C = size(C);
 sum = 0;
