@@ -1,16 +1,16 @@
 %%K-Means MATLAB Example
-%%Author Muhammed Mustafa Öney
+%%Author Muhammed Mustafa Ã–ney
 
 clear all;
 close all;
 clc;
 %% datapreprocessing
 M = readtable('veriler.csv');
-x_train = M(1:15,1:4);  %satır sayısının %77si kadar egitim verisi
-y_train = M(1:15,4);    %egitimde kullanılan veriler, tahmin edilecek sütun dışındaki sütunlardan 
-                        %alınan örnekler icin(x),
-                        %tahmin edilecek sütundan alınan örnekler icin(y) kullanılır
-x_test = M(16:end,1:4); %satır sayısının %33ü kadar test verisi
+x_train = M(1:15,1:4);  %satÃ½r sayÃ½sÃ½nÃ½n %77si kadar egitim verisi
+y_train = M(1:15,4);    %egitimde kullanÃ½lan veriler, tahmin edilecek sÃ¼tun dÃ½Ã¾Ã½ndaki sÃ¼tunlardan 
+                        %alÃ½nan Ã¶rnekler icin(x),
+                        %tahmin edilecek sÃ¼tundan alÃ½nan Ã¶rnekler icin(y) kullanÃ½lÃ½r
+x_test = M(16:end,1:4); %satÃ½r sayÃ½sÃ½nÃ½n %33Ã¼ kadar test verisi
 y_test = M(16:end,4);   %known values
 
 %% train for  KNN Algorithm
@@ -29,4 +29,4 @@ for i=1:size_C(1,1)
 end
 size_y = size(y_test);
 error = (size_y(1,1)-sum)/size_y(1,1);
-disp(error);
+disp(error); 
