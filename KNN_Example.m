@@ -1,4 +1,4 @@
-%%K-Means MATLAB Example
+%%KNN MATLAB Example
 %%Author Muhammed Mustafa Öney
 
 clear all;
