@@ -4,3 +4,4 @@ The project description can be found in the repo as MobileComm2018_project and t
 
 In project it had been asked to predict some of columns of the raw data. So we firstly make an prediction algorithm taht works on a more light dataset. The example code and datasets are KNN_Example and veriler.csv
 
+Refinedata.m is used for deleting unnecessary columns of the data.
